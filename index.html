@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Séduction - 150 Techniques Psychologiques</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #e94560;
+            --secondary: #533483;
+            --dark: #0f3460;
+            --darker: #16213e;
+            --light: #f1f1f1;
+            --accent: #ff7a8a;
+            --success: #4ecca3;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            color: var(--light);
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(233, 69, 96, 0.03) 0%, transparent 20%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(233, 69, 96, 0.2);
+            color: var(--accent);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(233, 69, 96, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 12px rgba(233, 69, 96, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(233, 69, 96, 0);
+            }
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--light);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-btn:hover,
+        .nav-btn.active {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Sections */
+        .section {
+            background: rgba(26, 26, 46, 0.7);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: linear-gradient(90deg, var(--dark), var(--darker));
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .section-icon {
+            font-size: 1.8rem;
+            margin-right: 15px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(233, 69, 96, 0.2);
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .section-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .technique {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            border-left: 3px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .technique:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background: rgba(233, 69, 96, 0.1);
+        }
+
+        .technique-number {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            background: rgba(233, 69, 96, 0.2);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .technique-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--light);
+        }
+
+        .technique-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, rgba(15, 52, 96, 0.9) 0%, rgba(22, 33, 62, 0.95) 100%);
+            border-radius: 20px;
+            margin: 50px 0;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+
+        .cta-text {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(233, 69, 96, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+
+            .section-content {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .nav-container {
+                gap: 5px;
+            }
+
+            .nav-btn {
+                padding: 8px 15px;
+                font-size: 0.8rem;
+            }
+
+            .section-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.7rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .badge {
+                font-size: 0.8rem;
+                padding: 6px 15px;
+            }
+
+            .section-header {
+                padding: 15px;
+            }
+
+            .section-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <span class="badge">MASTERCLASS DE SÉDUCTION</span>
+                <h1>150 TECHNIQUES POUR DRAGUER UNE FILLE COMPLIQUÉE</h1>
+                <p class="subtitle">(ET LA RENDRE ACCRO À TOI)</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <div class="nav-container">
+            <button class="nav-btn active" data-section="mindset">
+                <i class="fas fa-brain"></i> Mentalité
+            </button>
+            <button class="nav-btn" data-section="communication">
+                <i class="fas fa-comments"></i> Communication
+            </button>
+            <button class="nav-btn" data-section="psychology">
+                <i class="fas fa-venus"></i> Psychologie
+            </button>
+            <button class="nav-btn" data-section="actions">
+                <i class="fas fa-rocket"></i> Actions
+            </button>
+            <button class="nav-btn" data-section="finesse">
+                <i class="fas fa-crown"></i> Finesse
+            </button>
+        </div>
+
+        <!-- Section 1: Mentalité -->
+        <div class="section" id="mindset">
+            <div class="section-header">
+                <div class="section-icon">🧠</div>
+                <h2 class="section-title">I. MENTALITÉ ET ATTITUDE</h2>
+            </div>
+            <div class="section-content">
+                <div class="technique">
+                    <span class="technique-number">1</span>
+                    <h3 class="technique-title">Sois toujours un peu mystérieux</h3>
+                    <p class="technique-desc">Le mystère stimule la curiosité et maintient l'intérêt. Ne révèle pas tout
+                        sur toi d'un coup.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">2</span>
+                    <h3 class="technique-title">Ne sois jamais trop disponible</h3>
+                    <p class="technique-desc">La rareté augmente ta valeur perçue. Laisse-la venir vers toi.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">3</span>
+                    <h3 class="technique-title">Ne montre pas que tu es pressé</h3>
+                    <p class="technique-desc">La patience montre confiance en soi. Prends ton temps.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">4</span>
+                    <h3 class="technique-title">Sois calme face aux provocations</h3>
+                    <p class="technique-desc">Le contrôle émotionnel impressionne plus que les réactions impulsives.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">5</span>
+                    <h3 class="technique-title">Valorise-toi sans arrogance</h3>
+                    <p class="technique-desc">Confiance ≠ prétention. Montre ta valeur avec humilité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">6</span>
+                    <h3 class="technique-title">Ne cours pas après elle</h3>
+                    <p class="technique-desc">La poursuite désespérée est répulsive. Sois un objectif, pas un
+                        poursuivant.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">7</span>
+                    <h3 class="technique-title">Ne montre pas ta jalousie, maîtrise-la</h3>
+                    <p class="technique-desc">La jalousie visible montre de l'insécurité. Gère tes émotions.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">8</span>
+                    <h3 class="technique-title">Assume tes choix sans te justifier</h3>
+                    <p class="technique-desc">Les personnes sûres d'elles n'expliquent pas constamment leurs décisions.
+                    </p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">9</span>
+                    <h3 class="technique-title">Ne cherche pas à plaire à tout prix</h3>
+                    <p class="technique-desc">Sois authentique plutôt que constamment accommodant.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">10</span>
+                    <h3 class="technique-title">Dégage de la sécurité</h3>
+                    <p class="technique-desc">Une posture confiante et un regard assuré inspirent confiance.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">11</span>
+                    <h3 class="technique-title">Sois toujours propre et bien habillé</h3>
+                    <p class="technique-desc">L'apparence compte - montre que tu prends soin de toi.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">12</span>
+                    <h3 class="technique-title">Respire la confiance, pas la prétention</h3>
+                    <p class="technique-desc">La vraie confiance est silencieuse, la prétention est bruyante.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">13</span>
+                    <h3 class="technique-title">N'aie pas peur de la perdre</h3>
+                    <p class="technique-desc">L'attachement désespéré est visible et répulsif.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">14</span>
+                    <h3 class="technique-title">Ne lui donne pas le pouvoir total</h3>
+                    <p class="technique-desc">Une relation saine est un partenariat, pas une soumission.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">15</span>
+                    <h3 class="technique-title">Garde ton humour</h3>
+                    <p class="technique-desc">L'humour désamorce les tensions et crée une connexion.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">16</span>
+                    <h3 class="technique-title">Ne dis pas "je t'aime" trop vite</h3>
+                    <p class="technique-desc">Les sentiments profonds prennent du temps à se développer.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">17</span>
+                    <h3 class="technique-title">Apprends à la déranger positivement</h3>
+                    <p class="technique-desc">Un peu de taquinerie légère maintient l'étincelle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">18</span>
+                    <h3 class="technique-title">Ne sois pas trop collant</h3>
+                    <p class="technique-desc">L'espace personnel est crucial - respecte-le.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">19</span>
+                    <h3 class="technique-title">Fais-la rire naturellement</h3>
+                    <p class="technique-desc">Le rire authentique crée des liens émotionnels forts.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">20</span>
+                    <h3 class="technique-title">Sois à l'aise même dans le silence</h3>
+                    <p class="technique-desc">Les silences confortables montrent une vraie connexion.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">21</span>
+                    <h3 class="technique-title">Contrôle ton regard</h3>
+                    <p class="technique-desc">Un regard soutenu mais pas insistant montre confiance et intérêt.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">22</span>
+                    <h3 class="technique-title">Sors du lot sans forcer</h3>
+                    <p class="technique-desc">Sois remarquable par ton authenticité, pas par des excentricités.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">23</span>
+                    <h3 class="technique-title">Développe tes passions personnelles</h3>
+                    <p class="technique-desc">Une vie riche attire plus qu'une vie centrée uniquement sur elle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">24</span>
+                    <h3 class="technique-title">Ne réponds pas immédiatement à chaque message</h3>
+                    <p class="technique-desc">Montre que tu as une vie en dehors d'elle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">25</span>
+                    <h3 class="technique-title">Ne la supplie jamais</h3>
+                    <p class="technique-desc">La supplication est l'antithèse de la confiance en soi.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">26</span>
+                    <h3 class="technique-title">Sache quand disparaître un moment</h3>
+                    <p class="technique-desc">L'absence rend le cœur plus affectueux - utilise-la stratégiquement.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">27</span>
+                    <h3 class="technique-title">Garde ton leadership naturel</h3>
+                    <p class="technique-desc">Prends des décisions, montre la voie sans être autoritaire.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">28</span>
+                    <h3 class="technique-title">Sois réellement occupé</h3>
+                    <p class="technique-desc">Une vie remplie est plus attirante qu'une vie vide.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">29</span>
+                    <h3 class="technique-title">Ne dévoile pas tous tes plans</h3>
+                    <p class="technique-desc">Garde une part de mystère sur tes projets futurs.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">30</span>
+                    <h3 class="technique-title">Crée la rareté</h3>
+                    <p class="technique-desc">Moins tu es disponible, plus tu deviens désirable.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Communication -->
+        <div class="section" id="communication">
+            <div class="section-header">
+                <div class="section-icon">💬</div>
+                <h2 class="section-title">II. COMMUNICATION STRATÉGIQUE</h2>
+            </div>
+            <div class="section-content">
+                <div class="technique">
+                    <span class="technique-number">31</span>
+                    <h3 class="technique-title">Envoie des messages courts mais marquants</h3>
+                    <p class="technique-desc">La qualité prime sur la quantité. Un message percutant vaut mieux qu'un
+                        roman.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">32</span>
+                    <h3 class="technique-title">Utilise les emojis avec subtilité</h3>
+                    <p class="technique-desc">Ils ajoutent de l'émotion sans infantiliser la conversation.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">33</span>
+                    <h3 class="technique-title">Complimente sans exagérer</h3>
+                    <p class="technique-desc">Les compliments sincères sont mémorables, la flatterie est oubliable.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">34</span>
+                    <h3 class="technique-title">Envoie-lui des messages vocaux avec une voix assurée</h3>
+                    <p class="technique-desc">Ta voix transmet des émotions que le texte ne peut pas capturer.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">35</span>
+                    <h3 class="technique-title">Utilise des surnoms attachants et uniques</h3>
+                    <p class="technique-desc">Un surnom personnel crée une intimité exclusive.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">36</span>
+                    <h3 class="technique-title">Fais des pauses entre les discussions</h3>
+                    <p class="technique-desc">Laisse l'anticipation construire entre vos échanges.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">37</span>
+                    <h3 class="technique-title">Parle avec confiance, jamais avec besoin</h3>
+                    <p class="technique-desc">Montre que tu veux sa présence, pas que tu en as besoin.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">38</span>
+                    <h3 class="technique-title">Sois curieux mais pas envahissant</h3>
+                    <p class="technique-desc">Pose des questions ouvertes sans faire un interrogatoire.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">39</span>
+                    <h3 class="technique-title">Raconte-lui des anecdotes marquantes</h3>
+                    <p class="technique-desc">Les histoires personnelles créent des connexions émotionnelles.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">40</span>
+                    <h3 class="technique-title">Fais-la rire avec intelligence</h3>
+                    <p class="technique-desc">L'humour intelligent stimule l'esprit autant que les émotions.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">41</span>
+                    <h3 class="technique-title">Réponds par des punchlines drôles</h3>
+                    <p class="technique-desc">Une répartie spirituelle montre vivacité d'esprit.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">42</span>
+                    <h3 class="technique-title">Ne cherche pas à être parfait</h3>
+                    <p class="technique-desc">L'authenticité avec des imperfections est plus attirante que la perfection
+                        feinte.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">43</span>
+                    <h3 class="technique-title">Sois légèrement taquin</h3>
+                    <p class="technique-desc">La taquinerie légère crée une complicité et maintient l'étincelle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">44</span>
+                    <h3 class="technique-title">Ne répète jamais les mêmes blagues</h3>
+                    <p class="technique-desc">La nouveauté maintient l'intérêt - renouvelle ton humour.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">45</span>
+                    <h3 class="technique-title">Surprends-la par ton vocabulaire</h3>
+                    <p class="technique-desc">Un langage riche montre profondeur et éducation.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">46</span>
+                    <h3 class="technique-title">Parle de tes valeurs avec sérénité</h3>
+                    <p class="technique-desc">Tes convictions montrent ton caractère - présente-les avec calme.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">47</span>
+                    <h3 class="technique-title">Dis-lui "je te laisse, j'ai un truc à faire" même si t'as rien</h3>
+                    <p class="technique-desc">Montre que ta vie ne tourne pas autour d'elle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">48</span>
+                    <h3 class="technique-title">Ne pose pas trop de questions</h3>
+                    <p class="technique-desc">Laisse la conversation couler naturellement plutôt que de l'interroger.
+                    </p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">49</span>
+                    <h3 class="technique-title">Laisse-la parfois mener la discussion</h3>
+                    <p class="technique-desc">Montre que tu t'intéresses à ce qu'elle a à dire.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">50</span>
+                    <h3 class="technique-title">Fais comme si elle devait te mériter</h3>
+                    <p class="technique-desc">Ta valeur ne devrait pas être donnée, mais méritée.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">51</span>
+                    <h3 class="technique-title">Ose le silence</h3>
+                    <p class="technique-desc">Les pauses stratégiques créent de l'intensité et de l'anticipation.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">52</span>
+                    <h3 class="technique-title">Partage des citations qui te représentent</h3>
+                    <p class="technique-desc">Les citations révèlent ta philosophie de vie.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">53</span>
+                    <h3 class="technique-title">Donne-lui un défi mental</h3>
+                    <p class="technique-desc">Stimule son intellect avec des énigmes ou des questions profondes.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">54</span>
+                    <h3 class="technique-title">Envoie une photo de quelque chose qui te fait penser à elle</h3>
+                    <p class="technique-desc">Montre qu'elle est dans tes pensées de manière spontanée.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">55</span>
+                    <h3 class="technique-title">Ne crains pas de la contredire</h3>
+                    <p class="technique-desc">Un débat respectueux montre ton caractère et ton intelligence.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">56</span>
+                    <h3 class="technique-title">Montre ton intelligence sans prêcher</h3>
+                    <p class="technique-desc">Partage tes connaissances avec humilité, pas avec condescendance.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">57</span>
+                    <h3 class="technique-title">Utilise des silences tactiques</h3>
+                    <p class="technique-desc">Un silence bien placé peut être plus parlant qu'un discours.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">58</span>
+                    <h3 class="technique-title">Crée des rituels dans vos échanges</h3>
+                    <p class="technique-desc">Des petites habitudes communes créent de l'intimité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">59</span>
+                    <h3 class="technique-title">Dis-lui qu'elle t'inspire</h3>
+                    <p class="technique-desc">Rien n'est plus flatteur que d'être une source d'inspiration.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">60</span>
+                    <h3 class="technique-title">Parle-lui de manière unique que personne d'autre ne fait</h3>
+                    <p class="technique-desc">Crée un style de communication qui vous est propre.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: Psychologie -->
+        <div class="section" id="psychology">
+            <div class="section-header">
+                <div class="section-icon">🔍</div>
+                <h2 class="section-title">III. PSYCHOLOGIE FÉMININE</h2>
+            </div>
+            <div class="section-content">
+                <div class="technique">
+                    <span class="technique-number">61</span>
+                    <h3 class="technique-title">Comprends qu'elle se teste elle-même avec toi</h3>
+                    <p class="technique-desc">Ses réactions testent ta confiance et ta constance.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">62</span>
+                    <h3 class="technique-title">Elle ne veut pas que tu cèdes trop facilement</h3>
+                    <p class="technique-desc">La résistance modérée montre du caractère et de la valeur.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">63</span>
+                    <h3 class="technique-title">Elle aime la stabilité mélangée à la surprise</h3>
+                    <p class="technique-desc">L'équilibre entre sécurité et excitation est idéal.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">64</span>
+                    <h3 class="technique-title">Elle cherche à être rassurée sans l'avouer</h3>
+                    <p class="technique-desc">Montre ta fiabilité à travers tes actions, pas tes paroles.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">65</span>
+                    <h3 class="technique-title">Elle a peur de s'attacher trop vite</h3>
+                    <p class="technique-desc">Respecte son rythme émotionnel sans pression.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">66</span>
+                    <h3 class="technique-title">Elle veut se sentir unique</h3>
+                    <p class="technique-desc">Montre-lui qu'elle occupe une place spéciale, pas interchangeable.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">67</span>
+                    <h3 class="technique-title">Elle observe tout, même ce que tu crois insignifiant</h3>
+                    <p class="technique-desc">Les petits détails révèlent beaucoup sur ton caractère.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">68</span>
+                    <h3 class="technique-title">Elle veut voir comment tu réagis au "non"</h3>
+                    <p class="technique-desc">Ta réaction face au rejet révèle ta maturité émotionnelle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">69</span>
+                    <h3 class="technique-title">Elle teste ta confiance</h3>
+                    <p class="technique-desc">Ses provocations testent la solidité de ton assurance.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">70</span>
+                    <h3 class="technique-title">Elle veut que tu sois un mystère à découvrir</h3>
+                    <p class="technique-desc">Garde des couches à révéler progressivement.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">71</span>
+                    <h3 class="technique-title">Elle déteste les gars qui se plaignent trop</h3>
+                    <p class="technique-desc">La positivité et la résilience sont attirantes.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">72</span>
+                    <h3 class="technique-title">Elle préfère l'action à la promesse</h3>
+                    <p class="technique-desc">Montre plutôt que dis ce que tu ressens.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">73</span>
+                    <h3 class="technique-title">Elle veut de la virilité mais aussi de l'émotion</h3>
+                    <p class="technique-desc">L'équilibre entre force et sensibilité est clé.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">74</span>
+                    <h3 class="technique-title">Elle s'attache par les souvenirs</h3>
+                    <p class="technique-desc">Crée des moments mémorables plutôt que des promesses.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">75</span>
+                    <h3 class="technique-title">Elle veut être impressionnée naturellement</h3>
+                    <p class="technique-desc">L'authenticité impressionne plus que la performance.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">76</span>
+                    <h3 class="technique-title">Elle aime les mecs sûrs d'eux</h3>
+                    <p class="technique-desc">La confiance en soi est l'attribut le plus attirant.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">77</span>
+                    <h3 class="technique-title">Elle fuit les dépendants affectifs</h3>
+                    <p class="technique-desc">Montre que tu es complet par toi-même.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">78</span>
+                    <h3 class="technique-title">Elle aime les regards profonds</h3>
+                    <p class="technique-desc">Un regard soutenu montre confiance et connexion.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">79</span>
+                    <h3 class="technique-title">Elle réagit à l'attention, pas à l'insistance</h3>
+                    <p class="technique-desc">L'attention sincère est appréciée, l'insistance est repoussante.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">80</span>
+                    <h3 class="technique-title">Elle teste si tu la désires sans en faire une obsession</h3>
+                    <p class="technique-desc">Montre ton désir avec contrôle, pas avec besoin.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">81</span>
+                    <h3 class="technique-title">Elle cherche quelqu'un qui l'élève</h3>
+                    <p class="technique-desc">Sois une personne qui l'inspire à grandir.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">82</span>
+                    <h3 class="technique-title">Elle aime les mecs qui savent ce qu'ils veulent</h3>
+                    <p class="technique-desc">La détermination est attirante - sois clair sur tes intentions.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">83</span>
+                    <h3 class="technique-title">Elle veut un mec qui lui tienne tête parfois</h3>
+                    <p class="technique-desc">Un débat respectueux montre que tu la respectes assez pour la contredire.
+                    </p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">84</span>
+                    <h3 class="technique-title">Elle aime quand tu doutes d'elle juste un peu</h3>
+                    <p class="technique-desc">Un peu de jalousie saine montre que tu tiens à elle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">85</span>
+                    <h3 class="technique-title">Elle veut ressentir qu'elle te manque</h3>
+                    <p class="technique-desc">L'absence créative renforce le désir.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">86</span>
+                    <h3 class="technique-title">Elle s'attache à ton odeur, ton style, ta voix</h3>
+                    <p class="technique-desc">Les détails sensoriels créent une empreinte mémorielle forte.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">87</span>
+                    <h3 class="technique-title">Elle veut vivre un film, pas un documentaire</h3>
+                    <p class="technique-desc">Crée du romantisme et de l'excitation dans votre relation.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">88</span>
+                    <h3 class="technique-title">Elle s'en fout de tes muscles, si t'as pas de vibe</h3>
+                    <p class="technique-desc">Ta présence et ton énergie comptent plus que ton physique.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">89</span>
+                    <h3 class="technique-title">Elle veut rire, rêver et cogiter</h3>
+                    <p class="technique-desc">Stimule son esprit, son cœur et son sens de l'humour.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">90</span>
+                    <h3 class="technique-title">Elle veut du trouble. Du bon trouble.</h3>
+                    <p class="technique-desc">Un peu d'imprévisibilité maintient l'excitation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Actions -->
+        <div class="section" id="actions">
+            <div class="section-header">
+                <div class="section-icon">🚀</div>
+                <h2 class="section-title">IV. ACTIONS ET GESTES CONCRETS</h2>
+            </div>
+            <div class="section-content">
+                <div class="technique">
+                    <span class="technique-number">91</span>
+                    <h3 class="technique-title">Offre-lui un petit truc inattendu</h3>
+                    <p class="technique-desc">Un cadeau spontané montre que tu penses à elle hors des occasions
+                        spéciales.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">92</span>
+                    <h3 class="technique-title">Laisse un mot discret dans sa poche</h3>
+                    <p class="technique-desc">Une attention personnelle crée un moment intime.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">93</span>
+                    <h3 class="technique-title">Crée une playlist avec 3 sons et une intro vocale</h3>
+                    <p class="technique-desc">Une création musicale personnelle touche directement les émotions.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">94</span>
+                    <h3 class="technique-title">Invite-la à un endroit qu'elle ne connaît pas</h3>
+                    <p class="technique-desc">Découvrir ensemble crée des souvenirs communs.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">95</span>
+                    <h3 class="technique-title">Envoie-lui une photo de ton enfance</h3>
+                    <p class="technique-desc">Partager ton passé crée de l'intimité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">96</span>
+                    <h3 class="technique-title">Propose-lui un défi sympa</h3>
+                    <p class="technique-desc">Un défi ludique crée de la complicité et des souvenirs.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">97</span>
+                    <h3 class="technique-title">Prépare-lui un mini jeu</h3>
+                    <p class="technique-desc">Le jeu stimule l'esprit enfantin et la connexion.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">98</span>
+                    <h3 class="technique-title">Apprends une phrase dans une langue qu'elle aime</h3>
+                    <p class="technique-desc">Montre de l'intérêt pour ses passions.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">99</span>
+                    <h3 class="technique-title">Envoie-lui une chanson qui parle d'elle sans le dire</h3>
+                    <p class="technique-desc">La musique transmet des émotions difficiles à exprimer.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">100</span>
+                    <h3 class="technique-title">Montre-lui un truc stylé que t'as fait</h3>
+                    <p class="technique-desc">Partage tes passions et talents sans arrogance.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">101</span>
+                    <h3 class="technique-title">Prends soin de toi physiquement</h3>
+                    <p class="technique-desc">Ton apparence montre que tu te respectes.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">102</span>
+                    <h3 class="technique-title">Prends-la en photo discrètement (avec respect)</h3>
+                    <p class="technique-desc">Capturer un moment authentique montre ton attention.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">103</span>
+                    <h3 class="technique-title">Fais-lui une surprise symbolique</h3>
+                    <p class="technique-desc">Une petite attention inattendue fait grande impression.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">104</span>
+                    <h3 class="technique-title">Partage un secret avec elle</h3>
+                    <p class="technique-desc">La confiance crée l'intimité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">105</span>
+                    <h3 class="technique-title">Emmène-la marcher sans destination</h3>
+                    <p class="technique-desc">L'aventure spontanée crée des souvenirs uniques.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">106</span>
+                    <h3 class="technique-title">Partage une série avec elle</h3>
+                    <p class="technique-desc">Une activité commune crée des références partagées.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">107</span>
+                    <h3 class="technique-title">Apporte-lui quelque chose chez elle sans occasion</h3>
+                    <p class="technique-desc">Une attention spontanée montre que tu penses à elle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">108</span>
+                    <h3 class="technique-title">Fais un truc artistique en pensant à elle</h3>
+                    <p class="technique-desc">Une création inspirée touche profondément.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">109</span>
+                    <h3 class="technique-title">Envoie-lui un message à 3h du mat genre "Je viens de rêver de toi."</h3>
+                    <p class="technique-desc">Montre qu'elle occupe ton subconscient.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">110</span>
+                    <h3 class="technique-title">Envoie-lui une capture drôle + "toi quand tu m'ignores."</h3>
+                    <p class="technique-desc">Une taquinerie légère montre que tu remarques son comportement.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">111</span>
+                    <h3 class="technique-title">Laisse-la choisir quelque chose pour toi</h3>
+                    <p class="technique-desc">Implique-la dans tes décisions pour créer un lien.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">112</span>
+                    <h3 class="technique-title">Change de parfum et fais-lui deviner</h3>
+                    <p class="technique-desc">Un jeu sensoriel qui crée de l'intimité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">113</span>
+                    <h3 class="technique-title">Partage un souvenir qui t'a marqué</h3>
+                    <p class="technique-desc">Ouvrir ton passé crée de la connexion émotionnelle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">114</span>
+                    <h3 class="technique-title">Envoie-lui une carte postale, même de ta ville</h3>
+                    <p class="technique-desc">Un geste vintage et personnel qui touche.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">115</span>
+                    <h3 class="technique-title">Envoie-lui un colis mystère avec une connerie dedans</h3>
+                    <p class="technique-desc">L'humour et la surprise combinés.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">116</span>
+                    <h3 class="technique-title">Fabrique quelque chose de tes mains pour elle</h3>
+                    <p class="technique-desc">Un objet unique montre l'effort et la pensée.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">117</span>
+                    <h3 class="technique-title">Envoie-lui une vidéo personnalisée</h3>
+                    <p class="technique-desc">Une attention multimédia qui se démarque.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">118</span>
+                    <h3 class="technique-title">Offre-lui un objet symbolique (pas cher, mais sincère)</h3>
+                    <p class="technique-desc">La signification compte plus que la valeur.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">119</span>
+                    <h3 class="technique-title">Prends une photo de quelque chose que tu veux faire avec elle</h3>
+                    <p class="technique-desc">Montre que tu envisages un futur ensemble.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">120</span>
+                    <h3 class="technique-title">Dessine-lui un truc. Même moche</h3>
+                    <p class="technique-desc">L'effort et l'intention comptent plus que le talent.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 5: Finesse -->
+        <div class="section" id="finesse">
+            <div class="section-header">
+                <div class="section-icon">🔥</div>
+                <h2 class="section-title">V. FINESSE & MANIPULATION LÉGÈRE</h2>
+            </div>
+            <div class="section-content">
+                <div class="technique">
+                    <span class="technique-number">121</span>
+                    <h3 class="technique-title">Crée du mystère autour de toi</h3>
+                    <p class="technique-desc">Une vie intéressante suscite la curiosité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">122</span>
+                    <h3 class="technique-title">Montre-lui que d'autres filles te veulent (sans frimer)</h3>
+                    <p class="technique-desc">La preuve sociale augmente ta valeur perçue.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">123</span>
+                    <h3 class="technique-title">Fais semblant d'être jaloux légèrement</h3>
+                    <p class="technique-desc">Une jalousie modérée montre que tu tiens à elle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">124</span>
+                    <h3 class="technique-title">Fuis après une intense conversation</h3>
+                    <p class="technique-desc">Quitte sur une note haute pour laisser du désir.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">125</span>
+                    <h3 class="technique-title">Sois imprévisible sans être instable</h3>
+                    <p class="technique-desc">Un peu de surprise maintient l'intérêt.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">126</span>
+                    <h3 class="technique-title">Ignore ses stories un jour, like-les le lendemain</h3>
+                    <p class="technique-desc">Varier ton attention crée de l'incertitude positive.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">127</span>
+                    <h3 class="technique-title">Donne-lui un surnom qu'elle ne comprend pas</h3>
+                    <p class="technique-desc">Un mystère personnel qui la fait réfléchir à toi.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">128</span>
+                    <h3 class="technique-title">Parle d'elle en bien à ses amies</h3>
+                    <p class="technique-desc">Les compliments indirects ont plus de poids.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">129</span>
+                    <h3 class="technique-title">Dis-lui "Tu m'as ensorcelé." Puis change de sujet</h3>
+                    <p class="technique-desc">Une déclaration forte suivie de détachement.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">130</span>
+                    <h3 class="technique-title">Flatte-la juste avant de la contredire</h3>
+                    <p class="technique-desc">Un jeu psychologique qui maintient l'équilibre.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">131</span>
+                    <h3 class="technique-title">Crée la complicité par les disputes douces</h3>
+                    <p class="technique-desc">Un désaccord léger peut renforcer la connexion.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">132</span>
+                    <h3 class="technique-title">Fuis quand elle te veut, reviens quand elle s'éloigne</h3>
+                    <p class="technique-desc">Joue avec l'équilibre de l'attention.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">133</span>
+                    <h3 class="technique-title">Sois à la fois proche et distant</h3>
+                    <p class="technique-desc">L'équilibre entre connexion et indépendance.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">134</span>
+                    <h3 class="technique-title">Crée un manque en disparaissant 48h</h3>
+                    <p class="technique-desc">Une absence temporaire renforce l'appréciation.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">135</span>
+                    <h3 class="technique-title">Fais-lui croire qu'elle te rend meilleur</h3>
+                    <p class="technique-desc">Rien n'est plus flatteur que d'être une influence positive.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">136</span>
+                    <h3 class="technique-title">Parle-lui de tes rêves</h3>
+                    <p class="technique-desc">Partager tes aspirations crée de l'intimité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">137</span>
+                    <h3 class="technique-title">Présente-la comme "une fille dangereuse pour ton cœur"</h3>
+                    <p class="technique-desc">Un compliment voilé qui montre ta vulnérabilité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">138</span>
+                    <h3 class="technique-title">Montre-lui une photo de ton ex et demande-lui son avis</h3>
+                    <p class="technique-desc">Un jeu psychologique qui teste sa réaction.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">139</span>
+                    <h3 class="technique-title">Donne-lui l'impression qu'elle est la seule à te déstabiliser</h3>
+                    <p class="technique-desc">Montre qu'elle a un effet unique sur toi.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">140</span>
+                    <h3 class="technique-title">Répète-lui une phrase touchante à différents moments</h3>
+                    <p class="technique-desc">Créer un leitmotiv personnel entre vous.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">141</span>
+                    <h3 class="technique-title">Fais-lui croire qu'elle a du contrôle</h3>
+                    <p class="technique-desc">Laisse-la prendre certaines décisions pour renforcer son implication.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">142</span>
+                    <h3 class="technique-title">Dis-lui "Tu vas me manquer" puis reste silencieux longtemps</h3>
+                    <p class="technique-desc">Une déclaration suivie de silence pour impact.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">143</span>
+                    <h3 class="technique-title">Dis-lui "Tu me rends ouf" mais garde ton calme</h3>
+                    <p class="technique-desc">Contraste entre parole et comportement.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">144</span>
+                    <h3 class="technique-title">Joue le mec dur qui fond pour elle</h3>
+                    <p class="technique-desc">Le contraste entre apparence et sentiment.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">145</span>
+                    <h3 class="technique-title">Montre de l'indifférence pendant qu'elle parle, puis regarde-la
+                        intensément</h3>
+                    <p class="technique-desc">Un jeu d'attention qui capte son intérêt.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">146</span>
+                    <h3 class="technique-title">Ignore ses provocations légères</h3>
+                    <p class="technique-desc">Montre que tu ne mords pas à tous les appâts.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">147</span>
+                    <h3 class="technique-title">Fais des pauses dans vos appels/textos</h3>
+                    <p class="technique-desc">Crée du manque et de l'anticipation.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">148</span>
+                    <h3 class="technique-title">Laisse-la croire qu'elle prend les décisions</h3>
+                    <p class="technique-desc">Donne-lui l'illusion du contrôle.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">149</span>
+                    <h3 class="technique-title">Crée une atmosphère mystique autour de toi</h3>
+                    <p class="technique-desc">Une aura de mystère attire la curiosité.</p>
+                </div>
+                <div class="technique">
+                    <span class="technique-number">150</span>
+                    <h3 class="technique-title">Termine toujours sur une note qui la laisse pensée à toi</h3>
+                    <p class="technique-desc">Dernières impressions durables.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2 class="cta-title">Transforme ta vie amoureuse dès aujourd'hui</h2>
+            <p class="cta-text">Ces 150 techniques sont seulement le début. Pour maîtriser l'art de la séduction et
+                créer des connexions authentiques, télécharge notre guide complet.</p>
+
+            <div class="cta-buttons">
+                <button class="cta-btn">
+                    <i class="fas fa-download"></i>
+                    Télécharger le PDF
+                </button>
+                <button class="cta-btn">
+                    <i class="fas fa-video"></i>
+                    Formation Vidéo
+                </button>
+                <button class="cta-btn">
+                    <i class="fas fa-book"></i>
+                    eBook Premium
+                </button>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 Master Séduction - Tous droits réservés</p>
+            <p>Conçu avec ❤️ pour vous aider à créer des relations authentiques</p>
+        </footer>
+    </div>
+
+    <script>
+        // Navigation entre sections
+        const navBtns = document.querySelectorAll('.nav-btn');
+        const sections = document.querySelectorAll('.section');
+
+        navBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Retire la classe active de tous les boutons
+                navBtns.forEach(b => b.classList.remove('active'));
+                // Ajoute la classe active au bouton cliqué
+                btn.classList.add('active');
+
+                // Cache toutes les sections
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+
+                // Affiche la section correspondante
+                const sectionId = btn.getAttribute('data-section');
+                document.getElementById(sectionId).style.display = 'block';
+
+                // Scroll vers la section
+                document.getElementById(sectionId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Afficher la première section par défaut
+        document.getElementById('mindset').style.display = 'block';
+
+        // Animation des techniques au défilement
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.technique').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
